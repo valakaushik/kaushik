@@ -1,29 +1,5 @@
-[0:26 pm, 20/12/2023] het R&W: #include <stdio.h>
-
-int main() {
-    int units;
-    float charge;
-
-    printf("Enter the number of units consumed: ");
-    scanf("%d", &units);
-
-    float bill = 0.0;
-    float extra_charge = 0.0;
-
-    if (units <= 50) {
-        charge = 0.50; // charge per unit for first 50 units
-        bill = units * charge;
-    } else if (units <= 150) {
-        charge = 0.75; // charge per unit for units between 51 to 150
-        bill = 50 * 0.50; // charge for first 50 units
-        int additional_units = units - 50;
-        bill += additional_units * charge;
-    } else if (units <= 200) {
-        charge = 1.20; // charge per unit for units between 151 to 200
-        bill = 50 * 0.50; // charge for first 50 units
-        bill += 100 * 0.75; // charge for units between …
-[0:27 pm, 20/12/2023] het R&W: #include<stdio.h>
-int main(){
+ #include <stdio.h>
+ int main(){
   int in,out;
   printf("\n enter your choice");
   printf("\n press 1 for english.");
