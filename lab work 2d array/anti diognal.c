@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main()
+{
+    int a[20][20], i, j, m, n, sum = 0;
+    printf("Enter size of row and colume::");
+    scanf("%d %d", &m, &n);
+
+    printf("Enter elements:");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("\n Enter matrix \n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (i + j == 2)
+            {
+                sum = sum + a[i][j];
+            }
+
+            printf("%d", a[j][i]);
+        }
+        printf("\n");
+    }
+    printf("\n anti diagonal sum = %d", sum);
+
+    return 0;
+}
