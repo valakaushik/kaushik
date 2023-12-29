@@ -1,37 +1,35 @@
+//coulmn-wise
 #include <stdio.h>
-int main()
-{
-    int a[20][20], i, j, m, n, sum = 0;
-    printf("enter size of row and colume::");
-    scanf("%d %d", &m, &n);
 
-    printf("enter elements:");
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            scanf(" %d", &a[i][j]);
+int main()  
+{
+
+    int a[30][30],i, j,m,n,sum=0;
+    printf("\enter array elements row & column");
+    scanf("%d %d",&m,&n);
+    printf("Enter metrix\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
         }
     }
-    printf("\n matrix \n");
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            printf("%d", a[i][j]);
+    printf("Entered metrix\n");
+    for(i=0;i<m;i++){
+        sum=0;
+        for(j=0;j<n;j++){   
+            printf("%d",a[i][j]);
         }
-        printf("\n");
+            printf("\n");
     }
-    printf("\n Calculation of coulmn wisw Sum \n");
-    for (i = 0; i < m; i++)
-    {
-        sum = 0;
-        for (j = 0; j < n; j++)
-        {
-            sum = sum + a[j][i];
+
+    for(i=0;i<m;i++){
+        sum=0;
+        for(j=0;j<n;j++){   
+            sum+=a[j][i];
         }
-        printf("sum of all colume element %d \n", sum);
+            printf("sum is :%d\n",sum);
     }
+
 
     return 0;
 }
