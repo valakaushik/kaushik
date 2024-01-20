@@ -1,16 +1,22 @@
-#include<stdio.h>
-long int multiplyNumbers(int n);
-int main() {
-    int n;
-    printf("Enter a positive integer: ");
-    scanf("%d",&n);
-    printf("Factorial of %d = %ld", n, multiplyNumbers(n));
-    return 0;
+// find factorial of number using recursion.
+#include<stdio.h>                  
+void display(int a){            
+    if (a<=5){
+       printf("%d \n",a);
+       display(a+1);
+    }
+    
+}
+int sum(int a){                 
+    if (a<=5){
+       return a*sum(a+1);
+    } else{
+        return 1;
+    }
 }
 
-long int multiplyNumbers(int n) {
-    if (n>=1)
-        return n*multiplyNumbers(n-1);
-    else
-        return 1;
+void main(){
+    int i=1;
+    display(i);
+    printf("\n factorial of %d",sum(i));
 }
